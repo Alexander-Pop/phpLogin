@@ -14,4 +14,12 @@ $hash = md5($random1.$pass.$random2);
 
 $self = $_SERVER['REQUEST_URI'];
 
+// ************************************ //
+// **********	USER LOGOUT  ********** //
+// ************************************ //
+
+if(isset($_GET['logout']))
+{
+	unset($_SESSION['login']);
+}
 ?>
