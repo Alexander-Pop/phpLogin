@@ -1,5 +1,5 @@
 <?php
-session start();
+session_start();
 // ***************************************** //
 // **********	DECLARE VARIABLES  ********** //
 // ***************************************** //
@@ -56,4 +56,25 @@ else if (isset($_POST['submit'])) {
 		
 	}
 }	
-?>
+// *********************************************** //
+// **********	SHOW THE LOG-IN FORM	********** //
+// *********************************************** //
+
+else { 
+
+	display_login_form();
+
+}
+
+
+function display_login_form(){ ?>
+
+	<form action="<?php echo $self; ?>" method='post'>
+	<label for="username">username</label>
+	<input type="text" name="username" id="username">
+	<label for="password">password</label>
+	<input type="password" name="password" id="password">
+	<input type="submit" name="submit" value="submit">
+	</form>	
+
+<?php } ?>
